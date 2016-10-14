@@ -22,6 +22,8 @@ def calculate(myarg):
 			function = operators[token]
 			arg2 = stack.pop()
 			arg1 = stack.pop()
+			if arg1 == 100 or arg2 == 100:
+				print("ONE HUNDRED")
 			result = function(arg1, arg2)
 			stack.append(result)
 		print(stack)
